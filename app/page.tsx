@@ -29,7 +29,6 @@ export default function MobileApp() {
       cotasRestantes: 0,
       totalCotas: 50,
       descricao: 'Ativo de altíssima rentabilidade locado para corporações de luxo.',
-      // Link corrigido e estável
       imagemUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Porsche_Taycan_4S%2C_2020_%28GIMEX4058%29.jpg/640px-Porsche_Taycan_4S%2C_2020_%28GIMEX4058%29.jpg'
     }
   ]
@@ -130,7 +129,7 @@ export default function MobileApp() {
           </div>
         )}
 
-        {/* TELA 2: DETALHES (Layout Corrigido) */}
+        {/* TELA 2: DETALHES */}
         {telaAtual === 'detalhes' && carroSelecionado && (
           <div className="space-y-6 w-full px-4">
             {/* Botão Voltar com espaçamento superior */}
@@ -189,7 +188,7 @@ export default function MobileApp() {
           </div>
         )}
 
-        {/* TELA 3: CARTEIRA (Visual Clean) */}
+        {/* TELA 3: CARTEIRA */}
         {telaAtual === 'carteira' && (
           <div className="space-y-6 w-full px-4 pt-3">
             <h2 className="text-3xl font-extrabold text-gray-950 tracking-tighter px-1">Minha Posição</h2>
@@ -223,7 +222,7 @@ export default function MobileApp() {
 
       </main>
 
-      {/* NAVBAR INFERIOR FIXA (Estilo App Moderno) */}
+      {/* NAVBAR INFERIOR FIXA (Corrigida e Fechada) */}
       <nav className="py-3 px-6 border-t border-gray-100 bg-white fixed bottom-0 left-0 right-0 z-40 flex justify-around items-center text-xs shadow-[0_-5px_30px_rgba(0,0,0,0.02)]">
         <button 
           onClick={() => setTelaAtual('home')}
@@ -234,4 +233,6 @@ export default function MobileApp() {
         </button>
         <button 
           onClick={() => setTelaAtual('carteira')}
-          className={`font-bold flex flex-col items-center space-y-1 transition-colors ${telaAtual === 'carteira' ? '
+          className={`font-bold flex flex-col items-center space-y-1 transition-colors ${telaAtual === 'carteira' ? 'text-teal-600' : 'text-gray-500 hover:text-teal-700'}`}
+        >
+           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0
